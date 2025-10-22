@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBridge - Education Loans</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f7f9fc;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* PAGE TITLE */
+    .page-title {
+      text-align: center;
+      padding: 60px 20px;
+      color: #004aad;
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    /* LOAN INFO SECTION */
+    .loan-info {
+      background-color: #e9f1ff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      margin: 0 40px 50px 40px;
+      text-align: left;
+    }
+
+    .loan-info h2 {
+      color: #004aad;
+      margin-bottom: 20px;
+    }
+
+    .loan-info p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    /* EMI CALCULATOR */
+    .emi-calculator {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+    }
+
+    .emi-calculator h3 {
+      color: #004aad;
+      margin-bottom: 20px;
+    }
+
+    .emi-calculator input {
+      width: 80%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .emi-calculator button {
+      background-color: #ffb703;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .emi-calculator button:hover {
+      background-color: #fca311;
+      transform: translateY(-2px);
+    }
+
+    .emi-result {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #004aad;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .loan-info {
+        margin: 0 20px 50px 20px;
+      }
+
+      .emi-calculator input {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>EduBridge</h1>
+    <nav>
+    <a href="index.html" >Home</a>
+  <a href="loan.html">Loan</a>
+  <a href="scholarships.html">Scholarships</a>
+  <a href="eligible.html" >Check Eligibility</a>
+  <a href="apply.html" >Apply Guide</a>
+  <a href="resources.html" >Resources</a>
+   <a href="about.html" >About</a>
+   <a href="share.html">share/Award</a>
+  <a href="contact.html" >Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <h2 class="page-title">Education Loans</h2>
+
+  <!-- LOAN INFO SECTION -->
+  <section class="loan-info">
+    <h2>Why Choose Education Loans?</h2>
+    <p>Education loans help students fund their higher studies without worrying about upfront costs. You can choose from multiple banks offering low-interest rates and flexible repayment plans.</p>
+    <p>Key features:</p>
+    <ul>
+      <li>Low interest rates</li>
+      <li>Flexible tenure (up to 10 years)</li>
+      <li>Loan for tuition, books, and living expenses</li>
+      <li>Easy online application</li>
+    </ul>
+  </section>
+
+  <!-- EMI CALCULATOR -->
+  <section class="emi-calculator">
+    <h3>EMI Calculator</h3>
+    <input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
+    <input type="number" id="interestRate" placeholder="Interest Rate (%) per annum">
+    <input type="number" id="loanTenure" placeholder="Tenure (years)">
+    <br>
+    <button onclick="calculateEMI()">Calculate EMI</button>
+    <div class="emi-result" id="emiResult"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 EduBridge | Designed with ❤️ for students</p>
+  </footer>
+
+  <!-- JS for EMI -->
+  <script>
+    function calculateEMI() {
+      const P = parseFloat(document.getElementById('loanAmount').value);
+      const R = parseFloat(document.getElementById('interestRate').value) / (12*100);
+      const N = parseFloat(document.getElementById('loanTenure').value) * 12;
+
+      if(isNaN(P) || isNaN(R) || isNaN(N) || P <=0 || R < 0 || N <=0) {
+        document.getElementById('emiResult').innerText = "Please enter valid inputs.";
+        return;
+      }
+
+      const EMI = (P * R * Math.pow(1+R, N)) / (Math.pow(1+R, N) - 1);
+      document.getElementById('emiResult').innerText = `Estimated EMI: ₹ ${EMI.toFixed(2)} per month`;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Scholarship Portal</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #f0f5ff, #eaf2ff);
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0066cc;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 25px;
+      color: #333;
+    }
+
+    .contact-info a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="scholarships.html">Scholarships</a>
+    <a href="eligibility.html">Check Eligibility</a>
+    <a href="apply.html">Apply Guide</a>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About</a>
+    <a href="share.html">Share & Reward</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>📬 Contact Us</h1>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your full name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" placeholder="Enter the subject" />
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>📧 Email us at: <a href="mailto:info@scholarhub.in">info@scholarhub.in</a></p>
+      <p>📍 Campus Office: Academic Block, Scholarship Help Desk</p>
+      <p>💬 Follow us on 
+        <a href="#">Instagram</a> | 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Twitter</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

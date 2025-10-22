@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply & Guide – EduAssist</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #004aad;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 1.6em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #e6eefc;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #004aad;
+      font-weight: 600;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    section {
+      border-bottom: 2px solid #eee;
+      padding: 20px 0;
+    }
+
+    section h3 {
+      color: #004aad;
+    }
+
+    ol {
+      margin-left: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      background: #004aad;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    a.button:hover {
+      background: #ff6600;
+    }
+
+    a.back-to-top {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #004aad;
+      font-weight: 600;
+    }
+
+    a.back-to-top:hover {
+      color: #ff6600;
+    }
+
+    #searchBar {
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #004aad;
+      color: white;
+      border-radius: 0 0 10px 10px;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <header>Apply & Guide – Scholarships</header>
+
+  <nav>
+<a href="index.html" >Home</a>
+  <a href="loan.html">Loan</a>
+  <a href="scholarships.html">Scholarships</a>
+  <a href="eligible.html" >Check Eligibility</a>
+  <a href="apply.html" >Apply Guide</a>
+  <a href="resources.html" >Resources</a>
+   <a href="about.html" >About</a>
+   <a href="share.html">share/Award</a>
+  <a href="contact.html" >Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Step-by-Step Scholarship Guides</h2>
+
+    <!-- 🔍 Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search scholarship..." onkeyup="searchScholarship()">
+
+    <!-- 🎓 Central Sector -->
+    <section id="central-sector">
+      <h3>🎓 Central Sector Scheme of Scholarships</h3>
+      <p><strong>Eligibility:</strong> Students with 80%+ in Class 12 and enrolled in regular UG courses.</p>
+      <p><strong>Documents Required:</strong> Aadhaar, Income Certificate, Bank Passbook, Admission Proof.</p>
+      <p><strong>Important Dates:</strong> Opens 1st August | Last Date: 30th October</p>
+      <p><strong>How to Apply:</strong></p>
+      <ol>
+        <li>Go to <a href="https://scholarships.gov.in" target="_blank">National Scholarship Portal</a>.</li>
+        <li>Register and verify your email/phone.</li>
+        <li>Login and fill all details carefully.</li>
+        <li>Upload required documents and submit.</li>
+      </ol>
+      <a class="button" href="https://scholarships.gov.in" target="_blank">Apply Now</a>
+      <a class="back-to-top" href="#top">⬆️ Back to Top</a>
+    </section>
+
+    <!-- 💼 NMMS -->
+    <section id="nsp">
+      <h3>💼 National Means-cum-Merit Scholarship (NMMS)</h3>
+      <p><strong>Eligibility:</strong> Family income below ₹3.5 lakh per annum, min 55% in Class 8.</p>
+      <p><strong>Documents Required:</strong> Income certificate, mark sheet, Aadhaar, bank details.</p>
+      <p><strong>Important Dates:</strong> Opens 15th July | Last Date: 20th Oct</p>
+      <ol>
+        <li>Visit <a href="https://scholarships.gov.in" target="_blank">scholarships.gov.in</a>.</li>
+        <li>Register and fill NMMS form.</li>
+        <li>Upload documents, submit and print acknowledgment.</li>
+      </ol>
+      <a class="button" href="https://scholarships.gov.in" target="_blank">Apply Now</a>
+      <a class="back-to-top" href="#top">⬆️ Back to Top</a>
+    </section>
+
+    <!-- 👩‍🎓 Pragati -->
+    <section id="pragati">
+      <h3>👩‍🎓 AICTE Pragati Scholarship for Girls</h3>
+      <p><strong>Eligibility:</strong> For girls in 1st year of technical degree/diploma, income ≤ ₹8 lakh.</p>
+      <p><strong>Documents Required:</strong> Aadhaar, admission proof, income certificate, photo, mark sheet.</p>
+      <p><strong>Important Dates:</strong> Opens 1st Sept | Last Date: 31st Oct</p>
+      <ol>
+        <li>Go to <a href="https://www.aicte-pragati-saksham.gov.in" target="_blank">AICTE Portal</a>.</li>
+        <li>Login/Register and fill form carefully.</li>
+        <li>Upload scanned documents and submit.</li>
+      </ol>
+      <a class="button" href="https://www.aicte-pragati-saksham.gov.in" target="_blank">Apply Now</a>
+      <p><strong>Watch Tutorial:</strong> <a href="https://www.youtube.com/watch?v=example" target="_blank">How to Apply for Pragati Scholarship</a></p>
+      <a class="back-to-top" href="#top">⬆️ Back to Top</a>
+    </section>
+
+    <!-- ♿ Saksham -->
+    <section id="saksham">
+      <h3>♿ AICTE Saksham Scholarship for Differently-Abled Students</h3>
+      <p><strong>Eligibility:</strong> Students with ≥40% disability pursuing technical education.</p>
+      <p><strong>Documents Required:</strong> Disability certificate, income proof, admission letter, marksheet.</p>
+      <p><strong>Important Dates:</strong> Opens 1st Sept | Last Date: 31st Oct</p>
+      <ol>
+        <li>Visit <a href="https://www.aicte-pragati-saksham.gov.in" target="_blank">AICTE Portal</a>.</li>
+        <li>Register under Saksham Scheme.</li>
+        <li>Fill form, upload proofs and submit.</li>
+      </ol>
+      <a class="button" href="https://www.aicte-pragati-saksham.gov.in" target="_blank">Apply Now</a>
+      <a class="back-to-top" href="#top">⬆️ Back to Top</a>
+    </section>
+
+    <!-- 💡 FAQs -->
+    <section id="faq">
+      <h3>💡 Frequently Asked Questions</h3>
+      <p><strong>Q:</strong> Can I apply for more than one scholarship?<br>
+      <strong>A:</strong> Yes, but only one can be availed at a time as per government policy.</p>
+
+      <p><strong>Q:</strong> How will I know if my form is accepted?<br>
+      <strong>A:</strong> You can check your application status on the official NSP portal.</p>
+
+      <p><strong>Q:</strong> What if I enter wrong details?<br>
+      <strong>A:</strong> You can edit before final submission or contact your institution’s nodal officer.</p>
+    </section>
+
+    <!-- ☎️ Helpdesk -->
+    <section id="help">
+      <h3>📞 Need Help?</h3>
+      <p>Email: <a href="mailto:help@eduassist.com">help@eduassist.com</a></p>
+      <p>Official Portal: <a href="https://scholarships.gov.in" target="_blank">National Scholarship Portal</a></p>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 EduAssist | Designed for Students by Students 💙
+  </footer>
+
+  <!-- 🔍 Search Function -->
+  <script>
+    function searchScholarship() {
+      let input = document.getElementById('searchBar').value.toLowerCase();
+      let sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        let text = section.innerText.toLowerCase();
+        section.style.display = text.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
+
+    
+   
+    
+    
+
+
+
+
+
+
